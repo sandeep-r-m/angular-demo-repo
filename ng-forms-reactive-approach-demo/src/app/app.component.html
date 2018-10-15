@@ -1,22 +1,22 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form>
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" class="form-control">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">Simple Form (Using ReactiveFormsGroup)</div>
+        <div class="card-body">
+          <app-simple-form-group></app-simple-form-group>
         </div>
-        <div class="form-group">
-          <label for="email">email</label>
-          <input type="text" id="email" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">Nested Form (Using ReactiveFormsGroup)</div>
+        <div class="card-body">
+          <app-nested-form-group></app-nested-form-group>
         </div>
-        <div class="radio" *ngFor="let gender of genders">
-          <label>
-            <input type="radio" [value]="gender.value">&nbsp;{{ gender.desc }}
-          </label>
-        </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>
