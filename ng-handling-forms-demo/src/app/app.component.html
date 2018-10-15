@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div id="user-data" ngModelGroup="userData">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" ngModel required #username="ngModel">
+            <div class="alert alert-danger" *ngIf="!username.valid && username.touched">
+              Please enter username!
+            </div>
+            <div class="radio" *ngFor="let gender of genders">
+              <label>
+                <input type="radio" name="gender" ngModel [value]="gender" required>&nbsp;{{gender}}
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-default" type="button" (click)="onSuggesUsername()">Suggest an Username</button>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" ngModel required email #email="ngModel">
+            <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
+              Please enter valid email address!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="secret">Secret Questions</label>
+          <select id="secret" name="secret" class="form-control" ngModel>
+            <option value="pet">Your first Pet?</option>
+            <option value="teacher">Your first teacher?</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>&nbsp;
+        <button class="btn btn-secondary" type="button" (click)="onResetForm()">Reset</button>
+      </form>
+    </div>
+  </div>
+</div>

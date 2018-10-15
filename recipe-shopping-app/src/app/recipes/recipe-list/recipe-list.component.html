@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-xs-12">
+        <!--
+        <button type="button" class="btn btn-success" (click)="onNewRecipeBtnClick()">New Recipe</button>
+        -->
+        <button type="button" class="btn btn-success" [routerLink]="['new']">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <!-- binding recipe to [recipe] of recipe-list component -->
+            <!--
+            <app-recipe-item *ngFor="let recipe of recipes" [recipe-item]="recipe" (recipeItemClickEvent)="onRecipeItemClickEvent(recipe)">
+            </app-recipe-item>
+            -->
+
+            <!-- Using services for cross-component communication -->
+            <app-recipe-item *ngFor="let recipe of recipes" [recipe-item]="recipe">
+            </app-recipe-item>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12">
+    <!--Commenting below code : Using services for cross-component communication-->
+    <!--
+    <app-shopping-list-edit (ingridientAddedEvent)="onIngridientAddedEvent($event)"></app-shopping-list-edit>
+    -->
+    <app-shopping-list-edit></app-shopping-list-edit>
+    <hr>
+    <!--
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of ingredients">
+        {{ingredient.name}}
+        <span class="badge">{{ingredient.amount}}</span>
+      </li>
+    </ul>
+    -->
+    <!-- Ingredients section -->
+    <div class="list-group">
+      <a href="#" class="list-group-item" *ngFor="let ingredient of ingredients">
+        {{ingredient.name}}
+        <span class="badge">{{ingredient.amount}}</span>
+      </a>
+    </div>
+  </div>
+</div>

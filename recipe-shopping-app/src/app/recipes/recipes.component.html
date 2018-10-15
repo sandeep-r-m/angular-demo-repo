@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-4">
+    <!--Commenting below code : Using services for cross-component communication -->
+    <!--
+    <app-recipe-list (recipeItemWasClickedEvent)="onRecipeItemWasClickedEvent($event)"></app-recipe-list>
+    -->
+    <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-md-8">
+    <!--
+    <app-recipe-detail *ngIf="selectedRecipe" [recipe]="selectedRecipe"></app-recipe-detail>
+    -->
+    <!--using ng router : child routing -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<!-- String Interpolation {{expression}} : expression must resolve to string -->
+<!-- <h4>User <b>{{userName}}</b> is {{getUserStatus()}}</h4>  -->
+<!-- [disabled]="getUserStatus()" : property binding -->
+<!-- (click)="onUserEditBtnClick()" : even binding (event-name) -->
+<!-- *ngIf : a structural directive that changes DOM structure. * is used to indicate that it is a structural directive -->
+<div class="row">
+  <div class="col-sm-3">{{getUserName()}}</div>
+  <div class="col-sm-3">
+    <p [ngStyle]="{color : getUserStatusColor()}">{{getUserStatus()}}</p>
+    <p [ngClass]="{online : getUserStatus() === 'ONLINE'}">{{getUserStatus()}}</p>
+  </div>
+  <div class="col-sm-3">
+    <button type="button" class="btn btn-primary" [disabled]="getStatus()" (click)="onUserEditBtnClick()">Edit</button>
+  </div>
+  <div class="col-sm-3">
+    <div class="alert alert-success" *ngIf="getShowEditOperationStatusMessageFlag()">
+      <strong>{{getEditOperationStatusMessage()}}</strong>
+    </div>
+  </div>
+</div>

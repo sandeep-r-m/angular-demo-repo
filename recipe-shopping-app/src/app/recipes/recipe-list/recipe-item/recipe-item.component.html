@@ -1,0 +1,34 @@
+<!--
+<li class="list-group-item clearfix">
+  <a href="#">
+    <div class="pull-left">
+      <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+      <p class="list-group-item-text">Description</p>
+    </div>
+    <span class="pull-right">
+      <img src="" alt="" class="img-responsive" style="max-height: 50px; max-width: 50px;">
+    </span>
+  </a>
+</li>
+-->
+<!--
+<a href="#" class="list-group-item clearfix" (click)="onRecipeItemClick()" appBasicHighlightDirective>
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+    <p class="list-group-item-text">{{recipe.description}}</p>
+
+  </div>
+  <span class="pull-right">
+    <img src="{{recipe.imagePath}}" alt="" class="img-responsive" style="max-height: 50px; max-width: 50px;">
+  </span>
+</a>
+-->
+<a [routerLink]="['/recipes',recipe.id]" routerLinkActive="active" class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+    <p class="list-group-item-text">{{recipe.description}}</p>
+  </div>
+  <span class="pull-right">
+    <img src="{{recipe.imagePath}}" alt="" class="img-responsive" style="max-height: 50px; max-width: 50px;">
+  </span>
+</a>

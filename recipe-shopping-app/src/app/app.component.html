@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <!--
+      <app-header (navTabSelectedEvent)="onNavTabSelectedEvent($event)"></app-header>
+      -->
+      <app-header></app-header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!--
+      <app-recipes *ngIf="navTabSelected === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="navTabSelected === 'shopping-list'"></app-shopping-list>
+    </div>
+    -->
+      <!--ng routing-->
+      <router-outlet></router-outlet>
+    </div>
+    <hr>
+    <!--
+    <div class="row">
+      <div class="col-md-12">
+        <p appBasicHighlightDirective [highlightColor]="'yellow'">HELLO : This is custom directive -
+          BasicHighlightDirective</p>
+      </div>
+    </div>
+    -->
+  </div>

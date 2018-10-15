@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col">
+        <h4>Welcome to Server Manager 4.0</h4>
+        <p>Manage your Servers and Users.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button routerLink="/servers">Load Servers Using routerLink</button>
+        <hr>
+        <button (click)="onLoadServersClick()">Load Servers Programmatically</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-1"><button class="btn btn-primary" (click)="onLoginClick()">Login</button></div>
+    <div class="col-sm-1"><button class="btn btn-secondary" (click)="onLogoutClick()">Logout</button></div>
+    <div class="col-sm-10"></div>
+</div>

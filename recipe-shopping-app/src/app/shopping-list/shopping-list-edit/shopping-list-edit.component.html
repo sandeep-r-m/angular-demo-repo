@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form action="#">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="ingredientName">Name</label>
+          <input type="text" class="form-control" id="ingredientName" #ingredientName>
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="ingredientQuantity">Quantity</label>
+          <input type="text" class="form-control" id="ingredientQuantity" #ingredientQuantity>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group">
+            <button type="button" class="btn btn-success" type="submit" (click)="onIngredientAddClick()">Add</button>
+            <button type="button" class="btn btn-warning">Clear</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
